@@ -18,6 +18,7 @@ Lab3 (Nasa logs processing):
 Lab4 (ID3v2 mp3 metadata redactor):
 * [source code](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/clab4.c)
 * [test mp3 file](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/test.mp3)
+* [description](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/lab4.pdf)
 
 Lab5 (Conway's game of life, BMP):
 * [source code](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.c)
