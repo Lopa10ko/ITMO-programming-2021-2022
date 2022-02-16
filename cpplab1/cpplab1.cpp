@@ -26,11 +26,7 @@ Line::Line(int number, Dot* source) {
     for (size_t i = 0; i < number; i++) {dots.push_back(source[i]);}
     this->quantity = number;
 }
-// Line::Line(const Line& l) {dots = l.dots;}
-// Line& Line::operator==(const Line& l) {
-//     dots = l.dots;
-//     return *this;
-// }
+
 Dot Line::getDot(int index) const {
     if (index < quantity) return dots[index];
 }
