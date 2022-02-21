@@ -1,6 +1,7 @@
-#include <iostream>
-#include <math.h>
 #include "cpplab1.h"
+#include <iostream>
+#include <cmath>
+#include <cassert>
 //cd "c:\Users\Georgy\Desktop\CLABS\cpp_lab\cpp_lab1\" && g++ cpplab1.cpp -o cpplab1 -std=c++11 && cpplab1
 const double pi = acos(-1);
 
@@ -26,11 +27,7 @@ Line::Line(int number, Dot* source) {
     for (size_t i = 0; i < number; i++) {dots.push_back(source[i]);}
     this->quantity = number;
 }
-// Line::Line(const Line& l) {dots = l.dots;}
-// Line& Line::operator==(const Line& l) {
-//     dots = l.dots;
-//     return *this;
-// }
+
 Dot Line::getDot(int index) const {
     if (index < quantity) return dots[index];
 }
@@ -49,6 +46,9 @@ void Line::setRotateLine(double alpha) {
     for (int i = 0; i < getQuantity(); i++) {
         getDot(i).Dot::setRotate(alpha);
     }
+}
+void Line::doShift(const Dot &d) {
+    setShiftLine(d.getX() - getDot(0).getX(), d.getY() - getDot(0).getY());
 }
 double CycleLine::getPerimeter() const {
     return getDot(getQuantity() - 1).getInterval(getDot(0)) + Line::getPerimeter();
@@ -113,15 +113,15 @@ double Polygon::getArea() const {
     if (n >= 3) {
         area += (getDot(n - 1).getX() * getDot(0).getY() - getDot(0).getX() * getDot(n - 1).getY());
     }
-    return abs(0.5 * area);
+    return abs(area / 2);
 }
 Triangle::Triangle(size_t number, Dot* source) : Polygon(number, source) {
     if (getQuantity() != 3) {throw std::invalid_argument("not a triangle data");}
 }
 bool Triangle::isRight() const {
-    return (((pow(getDot(0).Dot::getInterval(getDot(1)), 2) + pow(getDot(1).Dot::getInterval(getDot(2)), 2)) == (pow(getDot(0).Dot::getInterval(getDot(2)), 2)))
-    || ((pow(getDot(1).Dot::getInterval(getDot(2)), 2) + pow(getDot(2).Dot::getInterval(getDot(0)), 2)) == (pow(getDot(0).Dot::getInterval(getDot(1)), 2)))
-    || ((pow(getDot(1).Dot::getInterval(getDot(0)), 2) + pow(getDot(0).Dot::getInterval(getDot(2)), 2)) == (pow(getDot(1).Dot::getInterval(getDot(2)), 2))));
+    return (((pow(getDot(0).getInterval(getDot(1)), 2) + pow(getDot(1).getInterval(getDot(2)), 2)) == (pow(getDot(0).getInterval(getDot(2)), 2)))
+    || ((pow(getDot(1).getInterval(getDot(2)), 2) + pow(getDot(2).getInterval(getDot(0)), 2)) == (pow(getDot(0).getInterval(getDot(1)), 2)))
+    || ((pow(getDot(1).getInterval(getDot(0)), 2) + pow(getDot(0).getInterval(getDot(2)), 2)) == (pow(getDot(1).getInterval(getDot(2)), 2))));
 }
 bool Triangle::isPerfect() const {
     double side1 = getDot(0).getInterval(getDot(1));
@@ -136,6 +136,35 @@ bool Triangle::isIsoscles() const {
     return ((side1 == side2) || (side2 == side3) || (side1 == side3));
 }
 
+//////////////////////////FIXED///////////////////////////////////
+Trapezoid::Trapezoid(size_t number, Dot* source) : Polygon(number, source) {
+    if (getQuantity() != 4) {throw std::invalid_argument("not a trapezoid data");}
+    double norm_x1 = abs(getDot(0).getX() - getDot(1).getX()) / getDot(0).getInterval(getDot(1)),
+           norm_y1 = abs(getDot(0).getY() - getDot(1).getY()) / getDot(0).getInterval(getDot(1)),
+           norm_x2 = abs(getDot(1).getX() - getDot(2).getX()) / getDot(1).getInterval(getDot(2)),
+           norm_y2 = abs(getDot(1).getY() - getDot(2).getY()) / getDot(1).getInterval(getDot(2)),
+           norm_x3 = abs(getDot(2).getX() - getDot(3).getX()) / getDot(2).getInterval(getDot(3)),
+           norm_y3 = abs(getDot(2).getY() - getDot(3).getY()) / getDot(2).getInterval(getDot(3)),
+           norm_x4 = abs(getDot(3).getX() - getDot(0).getX()) / getDot(3).getInterval(getDot(0)),
+           norm_y4 = abs(getDot(3).getY() - getDot(0).getY()) / getDot(3).getInterval(getDot(0));
+    if ((norm_x1 != norm_x3 && norm_y3 != norm_y1) && (norm_x2 != norm_x4 && norm_y2 != norm_y4)) {
+        throw std::invalid_argument("not a trapezoid data");
+    }
+}
+double Trapezoid::getHeight() const {
+    return 3;
+    
+}
+
+PerfectPolygon::PerfectPolygon(size_t number, Dot* source) : Polygon(number, source) {
+    if (getQuantity() < 3) {throw std::invalid_argument("not a perfectpolygon data");}
+    double side = getDot(0).getInterval(getDot(1));
+    for (int i = 1; i < getQuantity() - 1; i++) {
+        if (getDot(i).getInterval(getDot(i + 1)) != side) {throw std::invalid_argument("not a perfect polygon data");}
+    }
+    if (side != getDot(getQuantity() - 1).getInterval(getDot(0))) {throw std::invalid_argument("not a perfect polygon data");}
+}
+/////////////////////////////////////////////////////////////////////////
 
 double PerfectPolygon::getSideLength() const {
     return getDot(0).getInterval(getDot(1));
@@ -185,10 +214,21 @@ void testPolygon() {
     std::cout << "area (6): " << poly2.getArea() << std::endl;
 }
 void testOther() {
-    Dot *first = new Dot[4]{Dot(), Dot(5, 12), Dot(23, 12), Dot(30, -12)}, *second = new Dot[3]{Dot(), Dot(0, 4), Dot(3, 0)};
-    const Triangle poly1(4, first);
+    Dot *first = new Dot[4]{Dot(), Dot(5, 12), Dot(23, 12), Dot(30, 0)}, *second = new Dot[3]{Dot(), Dot(0, 4), Dot(3, 0)},
+    *third = new Dot[4]{Dot(), Dot(5, 12), Dot(23, 12), Dot(30, -12)}, *trapezoid_reversed = new Dot[4]{Dot(), Dot(0, 1), Dot(5, 10), Dot(5, 0)},
+    *convex_trapezoid = new Dot[4]{Dot(), Dot(5, 10), Dot(0, 1), Dot(5, 0)}, *perfect = new Dot[4]{Dot(), Dot(1, 0), Dot(1, 1), Dot(0, 1)};
+    //const Triangle wrong_triangle(4, first);
     const Triangle poly2(3, second);
-    std::cout << "area (6): " << poly2.getArea() << std::endl;
+    assert(poly2.getArea() == 6);
+    const Trapezoid tr1(4, first);
+    //const Trapezoid wrong_trapezoid(3, second);
+    //const Trapezoid almost_trapezoid(4, third);
+    const Trapezoid tr_reversed(4, trapezoid_reversed);
+    assert(tr1.getArea() == 288);
+    //const Trapezoid trr_false(4, convex_trapezoid);
+    //const PerfectPolygon not_perfect(3, second);
+    const PerfectPolygon perfect_poly(4, perfect);
+
 }
 int main(int argc, char* argv[]) {
     testDot();
