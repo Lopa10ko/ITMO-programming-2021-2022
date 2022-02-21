@@ -1,8 +1,7 @@
-#pragma once
 #if !defined( CPPLAB1_H )
 #define CPPLAB1_H
 #include <vector>
-#include <math.h>
+#include <cmath>
 
 class Dot {
 //only for Dot class
@@ -11,7 +10,9 @@ private:
 //interface
 public:
     //defaults constructor
-    Dot(double x = 0.0, double y = 0.0);
+///////////////////FIXED/////////////////////////////
+    explicit Dot(double x = 0.0, double y = 0.0);
+/////////////////////////////////////////////////////
     Dot(const Dot &d) : x(d.x), y(d.y) {}; //undefined reference
     //operator
     Dot& operator = (const Dot &d);
@@ -56,6 +57,8 @@ public:
     void setRotateLine(double alpha);
     //reshift all
     void setShiftLine(double x, double y);
+    //shift starting point to A(x, y)
+    void doShift(const Dot& d);
 };
 
 //inherited from Line (if dts[0] == dots[-1])
@@ -77,6 +80,7 @@ public:
     virtual double getArea() const;
 };
 
+///////////////////FIXED/////////////////////////////
 class Triangle : public Polygon {
 public:
     Triangle() : Polygon() {}
@@ -89,16 +93,26 @@ private:
     bool isIsoscles() const;
 };
 
+///////////////////FIXED/////////////////////////////
 class Trapezoid : public Polygon {
 public:
-    using Polygon::Polygon;
+    Trapezoid() : Polygon() {}
+    Trapezoid(size_t number, Dot* source);
+    Trapezoid(const Trapezoid& tr) = default;
+    Trapezoid& operator=(const Trapezoid& tr) = default;
 private:
     double getHeight() const;
+    // double getPerimeter() const override;
+    // double getArea() const override;
 };
 
+///////////////////FIXED/////////////////////////////
 class PerfectPolygon : public Polygon {
 public:
-    using Polygon::Polygon;
+    PerfectPolygon() : Polygon() {}
+    PerfectPolygon(size_t number, Dot* source);
+    PerfectPolygon(const PerfectPolygon& per) = default;
+    PerfectPolygon& operator=(const PerfectPolygon& per) = default;
 private:
     double getSideLength() const;
     double getPerimeter() const override;
