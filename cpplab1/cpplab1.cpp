@@ -119,7 +119,9 @@ Triangle::Triangle(size_t number, Dot* source) : Polygon(number, source) {
     if (getQuantity() != 3) {throw std::invalid_argument("not a triangle data");}
 }
 bool Triangle::isRight() const {
-    return (getComputation(getDot(0), getDot(1), getDot(2)) == 0 || getComputation(getDot(1), getDot(2), getDot(0)) == 0 || getComputation(getDot(2), getDot(0), getDot(1)) == 0);
+    return (((pow(getDot(0).Dot::getInterval(getDot(1)), 2) + pow(getDot(1).Dot::getInterval(getDot(2)), 2)) == (pow(getDot(0).Dot::getInterval(getDot(2)), 2)))
+    || ((pow(getDot(1).Dot::getInterval(getDot(2)), 2) + pow(getDot(2).Dot::getInterval(getDot(0)), 2)) == (pow(getDot(0).Dot::getInterval(getDot(1)), 2)))
+    || ((pow(getDot(1).Dot::getInterval(getDot(0)), 2) + pow(getDot(0).Dot::getInterval(getDot(2)), 2)) == (pow(getDot(1).Dot::getInterval(getDot(2)), 2))));
 }
 bool Triangle::isPerfect() const {
     double side1 = getDot(0).getInterval(getDot(1));
