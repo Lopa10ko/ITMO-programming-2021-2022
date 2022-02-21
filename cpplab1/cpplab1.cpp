@@ -152,8 +152,14 @@ Trapezoid::Trapezoid(size_t number, Dot* source) : Polygon(number, source) {
     }
 }
 double Trapezoid::getHeight() const {
-    return 3;
-    
+    double norm_x1 = abs(getDot(0).getX() - getDot(1).getX()) / getDot(0).getInterval(getDot(1)),
+           norm_y1 = abs(getDot(0).getY() - getDot(1).getY()) / getDot(0).getInterval(getDot(1)),
+           norm_x3 = abs(getDot(2).getX() - getDot(3).getX()) / getDot(2).getInterval(getDot(3)),
+           norm_y3 = abs(getDot(2).getY() - getDot(3).getY()) / getDot(2).getInterval(getDot(3));
+    if (norm_x1 == norm_x3 && norm_y3 == norm_y1) {
+        return getArea() * 2 / (getDot(0).getInterval(getDot(1)) + getDot(2).getInterval(getDot(3)));
+    }
+    return getArea() * 2 / (getDot(1).getInterval(getDot(2)) + getDot(3).getInterval(getDot(0)));
 }
 
 PerfectPolygon::PerfectPolygon(size_t number, Dot* source) : Polygon(number, source) {
@@ -224,7 +230,7 @@ void testOther() {
     //const Trapezoid wrong_trapezoid(3, second);
     //const Trapezoid almost_trapezoid(4, third);
     const Trapezoid tr_reversed(4, trapezoid_reversed);
-    assert(tr1.getArea() == 288);
+    assert(tr1.getArea() == 288 && tr1.getHeight() == 12);
     //const Trapezoid trr_false(4, convex_trapezoid);
     //const PerfectPolygon not_perfect(3, second);
     const PerfectPolygon perfect_poly(4, perfect);
