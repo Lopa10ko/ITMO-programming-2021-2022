@@ -81,19 +81,28 @@ public:
     //     size_ = other.size_;
     //     long long key = min_;
     //     for (const auto &pch : other.coefs_) {coefs_[key].insert(pch); ++key;}
-
     // }
     // ~Polynom() {} = default;
     int getMin() const {return min_;}
     int getMax() const {return max_;}
     int getSize() const {return size_;}
-    // Polynom& operator*=(const Polynom &other) {
-    //     for (const auto &pch : other.coefs_) {
-    //         coefs_[pch.first] += pch.second;
-    //         if (!coefs_[pch.first]) {coefs_.erase(pch.first);}
-    //     }
-    //     return *this;
-    // }
+    Polynom derivative(const Polynom &other) {
+        Polynom temp;
+        for (const auto &pch : other.coefs_) {
+            temp.coefs_[pch.first + 1] += pch.second / (pch.first + 2);
+            if (!temp.coefs_[pch.first + 1]) {temp.coefs_.erase(pch.first + 1);}
+        }
+        return temp;
+    }
+    bool operator==(const Polynom &other) const {
+        bool null_condition = true, second_condition = true;
+        if (other.coefs_.empty() && coefs_.empty()) {return true;}
+        if (other.coefs_.empty() || coefs_.empty()) {return false;}
+        //auto pred = [] (auto f, auto s) {return (int)(f.first - s.first) == 0 && (int)(f.second - s.second) == 0;};
+        return other.coefs_.size() == coefs_.size()
+            && std::equal(other.coefs_.begin(), other.coefs_.end(), coefs_.begin());
+    }
+    bool operator!=(const Polynom &other) const {return !(*this == other);}
     Polynom& operator/=(double value) {
         if ((int)value == 0) {
             throw std::invalid_argument("no 0 devision allowed!");
@@ -220,9 +229,8 @@ void testPolynom() {
     assert(q2[0] == 10 && q2[1] == -2 && q2[2] == 1);
     std::cout << (q2 += q1) << std::endl;
     assert(q2[0] == 11 && q2[1] == -1 && q2[2] == 1 && q2[3] == -10);
-    
     const auto copy_q1 = q1;
-
+    assert((copy_q1 == q1) == true && (q1 != q2) == true && (q1 == q2) == false);
 }
 
 int main(int argc, char* argv[]) {
