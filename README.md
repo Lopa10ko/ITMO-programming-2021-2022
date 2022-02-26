@@ -24,7 +24,7 @@ CLab3 (Nasa logs processing):
 * [Logs (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab3/LAB3_server_logs.pdf)
 
 CLab4 (ID3v2 mp3 metadata redactor):
-* [source code](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/clab4.c)
+* [ID3v2 (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/clab4.c)
 * [test mp3 file](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/test.mp3)
 * [ID3v2 task](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/lab4.pdf)
 
