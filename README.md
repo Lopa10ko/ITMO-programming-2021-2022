@@ -6,7 +6,7 @@ CppLab1 (OOP, Operators overload):
 * [OOP (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1.cpp)
 * [OOP header (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1.h)
 * [Operators overload (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/overload.cpp)
-* [description](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1_OOP.pdf)
+* [OOP (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1_OOP.pdf)
 
 ## C Labs:
 
@@ -16,7 +16,7 @@ CLab1 (WordCount utility):
 
 CLab2 (uint_1024 implementation):
 * [Uint_1024 (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab2/clab2.c)
-* [.h file](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab2/clab2.h)
+* [Uint_1024 header (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab2/clab2.h)
  
 CLab3 (Nasa logs processing):
 * [Time window](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab3/clab3_time.c)
@@ -30,7 +30,7 @@ CLab4 (ID3v2 mp3 metadata redactor):
 
 CLab5 (Conway's game of life, BMP):
 * [Conway's game of life task (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.c)
-* [.h file](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.h)
+* [Conway's game of life task header (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.h)
 * [Conway's game of life (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.pdf)
 
 CLab6 (Archiver):
