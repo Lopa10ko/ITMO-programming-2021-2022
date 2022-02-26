@@ -1,33 +1,41 @@
 # ITMO-programming-2021-2022
 
-## Labs:
+## CPP Labs:
 
-Lab1 (WordCount utility):
-* [source code](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab1/clab1.c)
-* [description](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab1/WordCount.pdf)
+CppLab1 (OOP, Operators overload):
+* [OOP (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1.cpp)
+* [OOP header (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1.h)
+* [Operators overload (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/overload.cpp)
+* [description](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1_OOP.pdf)
 
-Lab2 (uint_1024 implementation):
-* [source code](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab2/clab2.c)
+## C Labs:
+
+CLab1 (WordCount utility):
+* [Wordcount (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab1/clab1.c)
+* [Wordcount (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab1/WordCount.pdf)
+
+CLab2 (uint_1024 implementation):
+* [Uint_1024 (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab2/clab2.c)
 * [.h file](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab2/clab2.h)
  
-Lab3 (Nasa logs processing):
+CLab3 (Nasa logs processing):
 * [Time window](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab3/clab3_time.c)
 * [Errors processing](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab3/clab3_codes.c)
-* [description](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab3/LAB3_server_logs.pdf)
+* [Logs (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab3/LAB3_server_logs.pdf)
 
-Lab4 (ID3v2 mp3 metadata redactor):
+CLab4 (ID3v2 mp3 metadata redactor):
 * [source code](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/clab4.c)
 * [test mp3 file](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/test.mp3)
-* [description](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/lab4.pdf)
+* [ID3v2 task](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/lab4.pdf)
 
-Lab5 (Conway's game of life, BMP):
-* [source code](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.c)
+CLab5 (Conway's game of life, BMP):
+* [Conway's game of life task (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.c)
 * [.h file](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.h)
-* [description](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.pdf)
+* [Conway's game of life (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.pdf)
 
-Lab6 (Archiver):
-* [source code](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab6/clab6.c)
-* [description](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab6/Archiver.pdf)
+CLab6 (Archiver):
+* [Archiver (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab6/clab6.c)
+* [Archiver (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab6/Archiver.pdf)
 
 ## Facts:
 > C-based paradigm is horrible language. It's made more horrible by the fact that a lot of substandard programmers use it, to the point where it's much much easier to generate total and utter crap with it. (c) Linus Torvalds
