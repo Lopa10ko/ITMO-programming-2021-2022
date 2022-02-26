@@ -145,6 +145,7 @@ public:
         Polynom temp{*this};
         return temp += other;
     }
+    ///////////////////ISO says not ambigious/////////////////////////
     friend Polynom operator+(const Polynom &other, const Polynom &one) {
         Polynom temp = one;
         for (const auto pch : other.coefs_) {
@@ -153,6 +154,7 @@ public:
         }
         return temp;
     }
+    ////////////////////only one in use//////////////////////////////
     Polynom& operator+(double value) {
         for (const auto &pch : coefs_) {
             coefs_[pch.first] += value;
@@ -225,12 +227,18 @@ void testPolynom() {
     Polynom q1("4a^4+ 3a- 10a^3 - 2a + 1-4a^4");
     //std::cout << q1 << std::endl;
     // std::cout << q1.coefs_.at(3);  -- map public testing (passed:OK)
-    Polynom q2(0, 4, {10, -2, 1});
+    Polynom q2(0, 4, {10, -2, 1}), q3(0, 5, {10, -2, 1, 2, 5, -2}), q3_copy = q3;
     assert(q2[0] == 10 && q2[1] == -2 && q2[2] == 1);
     std::cout << (q2 += q1) << std::endl;
     assert(q2[0] == 11 && q2[1] == -1 && q2[2] == 1 && q2[3] == -10);
     const auto copy_q1 = q1;
     assert((copy_q1 == q1) == true && (q1 != q2) == true && (q1 == q2) == false);
+    const auto multq = q2 * q1, addq = q3 += q2;
+    assert((q1 * q2) == (q2 * q1));
+    Polynom ans_q3("-2t^5+5t^4-8t^3+2t^2- 3t + 21");
+    assert(ans_q3 == q3);
+    std::cout << addq << std::endl;
+    assert(addq == (q2 + q3_copy));
 }
 
 int main(int argc, char* argv[]) {
