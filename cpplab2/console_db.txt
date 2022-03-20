@@ -1,0 +1,34 @@
+select * from currency_table;
+
+FOR EXISTING TABLE:
+
+1)
+"BEGIN TRANSACTION;
+CREATE TEMPORARY TABLE t1_backup(id, curr_name, value_1);
+INSERT INTO t1_backup SELECT id, curr_name, value_1 FROM currency_table;
+DROP TABLE currency_table;
+CREATE TABLE currency_table(id, curr_name, value_1);
+INSERT INTO currency_table SELECT id, curr_name, value_1 FROM t1_backup;
+DROP TABLE t1_backup;
+COMMIT;"
+2)
+"DELETE from currency_table where id < 35;"
+
+
+FOR NEW TABLE:
+
+"create table currency_table
+ (
+ 	id int not null
+ 		constraint currency_table_pk
+ 			primary key,
+ 	curr_name text,
+ 	value_1 double
+ );
+
+ create unique index currency_table_curr_name_uindex
+ 	on currency_table (curr_name);
+
+ create unique index currency_table_id_uindex
+ 	on currency_table (id);"
+
