@@ -26,7 +26,6 @@ public:
     virtual ~Circular() {allocator.deallocate(values, capacity);}
 
     // logic:
-    
 
 };
 
