@@ -1,5 +1,5 @@
 *.json
 *.txt
 *.exe
-*.vscode
-*.vs
+**/.vs/
+**/.vscode/
