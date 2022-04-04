@@ -3,3 +3,4 @@
 *.exe
 **/.vs/
 **/.vscode/
+.vscode/settings.json
