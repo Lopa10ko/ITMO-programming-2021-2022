@@ -34,6 +34,12 @@ namespace CB {
         unsigned long get_tail() const {return tail;}
         unsigned long get_length() const {return length;}
         unsigned long get_capacity() const {return capacity;}
+        T *init_data() {return values;}
+        const T *init_data() const {return values;}
+        T &clear() {
+            head = tail = length = 0;
+            return *this;
+        }
         // logic:
         void push_back(const T &val) {
             if (is_filled()) {
@@ -45,7 +51,7 @@ namespace CB {
         }
         void push_back(const T array[], unsigned int length_) {
             for (unsigned long i = 0; i < length_; ++i) {
-                try {push_back(array[i]);}
+                try {force_push_back(array[i]);}
                 catch (std::overflow_error &err) {throw err;}
             }
         }
@@ -80,6 +86,8 @@ namespace CB {
                 length++;
             }
         }
+        T &at_front() {return this->operator[](0);}
+        const T &at_front() const {return this->operator[](0);}
         T pop_back() {
             head = (!head) ? capacity - 1 : head - 1;
             --length;
@@ -100,13 +108,28 @@ namespace CB {
         T get_back() {
             return (head == 0) ? values[capacity - 1] : values[head - 1];
         }
+        T &at_back() {return this->operator[](0);}
+        const T &at_back() const {return this->operator[](0);}
         const T &get_back() const {
             return operator[](get_length() - 1);
         }
         T operator[](unsigned int index) {
-            return (index <= length) ? values[(head + index) % capacity] : NULL;
+            if (!is_filled()) {
+                throw std::invalid_argument("default buffer object");
+            }
+            return (index <= length) ? values[(head + index) % capacity] : 0;
         }
-        //resize
+        void resize(unsigned long new_capacity) {
+            T *new_values = new T [new_capacity];
+            for (int i = 0; i < ((new_capacity >= capacity) ? new_capacity : capacity); ++i) {
+                new_values[i] = (i <= capacity) ? values[i] : 0;
+            }
+            length = (new_capacity <= capacity) ? new_capacity : capacity;
+            values = new_values;
+            capacity = new_capacity;
+            tail %= capacity;
+            head %= capacity;
+        }
         //reserve
         //insert emplace
         //erase
