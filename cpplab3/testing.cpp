@@ -16,6 +16,7 @@ int test_force_push() {
     }
     std::cout << "\nbuilt stl: ";
     stl.get_all();
+    std::cout << "char init: ";
     Circular <char> stl_2(5);
     stl_2.force_push_back('h');
     stl_2.force_push_front('q');
@@ -24,6 +25,11 @@ int test_force_push() {
     stl_2.force_push_back('l');
     stl_2.force_push_front('g');
     stl_2.get_all();
+    std::cout << "array init: ";
+    Circular <unsigned long> stl_arr(8);
+    unsigned long arr[8] = {1, 2, 3, 1, 2, 3, 1};
+    stl_arr.push_back(arr, 8);
+    stl_arr.get_all();
     return 0;
 }
 int test_push() {
@@ -87,6 +93,19 @@ int test_gets() {
     assert(stl.get_front() == *(first + 1));
     return 0;
 }
+int test_resize() {
+    Circular <unsigned long> stl(8);
+    //[TEST]: operator[]
+    for (unsigned long i = 0; i < stl.get_capacity(); ++i) {
+        stl.force_push_back(i);
+    }
+    assert(stl.get_length() == 8 && stl.get_back() == 7);
+    stl.resize(4);
+    assert(stl.get_length() == 4 && stl.get_back() == 3);
+    stl.resize(9);
+    assert(stl.get_capacity() == 9 && stl.get_length() == 4 && stl.get_back() == 0);
+    return 0;
+}
 
 int main() {
     assert(!test_force_push());
@@ -99,6 +118,7 @@ int main() {
     assert(!test_stl_algo());
     assert(!test_by_index());
     assert(!test_gets());
+    assert(!test_resize());
 
     return 0;
 }
