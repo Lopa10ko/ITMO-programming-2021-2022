@@ -119,6 +119,5 @@ int main() {
     assert(!test_by_index());
     assert(!test_gets());
     assert(!test_resize());
-
     return 0;
 }
