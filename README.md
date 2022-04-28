@@ -29,14 +29,14 @@ CLab2 (uint_1024 implementation):
 * [Uint_1024 header (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab2/clab2.h)
  
 CLab3 (Nasa logs processing):
-* [Time window](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab3/clab3_time.c)
-* [Errors processing](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab3/clab3_codes.c)
+* [Time window (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab3/clab3_time.c)
+* [Errors processing (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab3/clab3_codes.c)
 * [Logs (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab3/LAB3_server_logs.pdf)
 
 CLab4 (ID3v2 mp3 metadata redactor):
 * [ID3v2 (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/clab4.c)
-* [test mp3 file](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/test.mp3)
-* [ID3v2 task](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/lab4.pdf)
+* [test mp3 (file)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/test.mp3)
+* [ID3v2 (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/lab4.pdf)
 
 CLab5 (Conway's game of life, BMP):
 * [Conway's game of life task (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.c)
