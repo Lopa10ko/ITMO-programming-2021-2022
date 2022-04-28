@@ -1,5 +1,5 @@
 # ITMO-programming-2021-2022
-
+---
 ## CPP Labs:
 
 CppLab1 (OOP, Operators overload):
@@ -13,6 +13,13 @@ CppLab2 (cURL, JSON, SQLite3: Automatic currency parser):
 * [Currency_parser (requiremets)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab2/console_db.txt)
 * [Currency_parser (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab2/lab2.pdf)
 
+CppLab3 (Circuit Buffer - STL/predicates):
+* [Circular buffer (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/circular.hpp)
+* [Predicates (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/predicates.hpp)
+* [Currency_parser (requiremets)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab2/console_db.txt)
+* [Currency_parser (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab2/lab2.pdf)
+
+---
 ## C Labs:
 
 CLab1 (WordCount utility):
