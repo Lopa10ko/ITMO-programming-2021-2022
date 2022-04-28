@@ -1,7 +1,6 @@
 # ITMO-programming-2021-2022
 ---
 ## CPP Labs:
-
 CppLab1 (OOP, Operators overload):
 * [OOP (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1.cpp)
 * [OOP header (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1.h)
@@ -21,7 +20,6 @@ CppLab3 (Circuit Buffer - STL/predicates):
 
 ---
 ## C Labs:
-
 CLab1 (WordCount utility):
 * [Wordcount (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab1/clab1.c)
 * [Wordcount (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab1/WordCount.pdf)
