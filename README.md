@@ -18,6 +18,11 @@ CppLab3 (Circuit Buffer - STL/predicates):
 * [Predicates tests (test)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/test_predicates.cpp)
 * [STL&predicates (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/lab3_stl.pdf)
 
+CppLab4 (Rubik's Cube - GenAlgo/OpenCV):
+* [Rubik's Cube architecture (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab4/cube)
+* [OpenCV live detection (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab4/main.cpp)
+* [Rubik's Cube (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab4/cpplab4_RubiksCube.pdf)
+
 # C Labs:
 
 CLab1 (WordCount utility):
