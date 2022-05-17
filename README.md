@@ -1,6 +1,12 @@
 # CPP Labs:
+| | LAB      |     LINKS     |
+|-|----------|-------------|
+|***CppLab1***|[OOP, Operators overload](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1_OOP.pdf)|<ul><li>[OOP (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1.cpp)</li><li> [OOP (header)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1.h)</li><li>[Operators overload (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/overload.cpp)</li></ul>|
+|***CppLab2***|[Currency parser - cURL, JSON, SQLite3](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab2/lab2.pdf)|<ul><li>[Currency_parser (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab2/testt.cpp)</li><li>[Currency_parser (reqs)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab2/console_db.txt)</li></ul>|
+|***CppLab3***|[Circuit Buffer - STL/predicates](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/lab3_stl.pdf)|<ul><li>[Circular buffer (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/circular.hpp)</li><li>[Predicates (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/predicates.hpp)</li><li>[Circular buffer (test)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/testing_circular.cpp)</li><li>[Predicates (test)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/test_predicates.cpp)</li></ul>|
+|***CppLab4***|[Rubik's Cube - GenAlgo/OpenCV](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab4/cpplab4_RubiksCube.pdf)|<ul><li>[Rubik's Cube (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab4/cube)</li><li>[Cube state detection (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab4/main.cpp)</li></ul>|
 
-CppLab1 (OOP, Operators overload):
+<!-- CppLab1 (OOP, Operators overload):
 * [OOP (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1.cpp)
 * [OOP header (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1.h)
 * [Operators overload (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/overload.cpp)
@@ -9,19 +15,19 @@ CppLab1 (OOP, Operators overload):
 CppLab2 (cURL, JSON, SQLite3: Automatic currency parser):
 * [Currency_parser (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab2/testt.cpp)
 * [Currency_parser (requiremets)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab2/console_db.txt)
-* [Currency_parser (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab2/lab2.pdf)
-
+* [Currency_parser (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab2/lab2.pdf) -->
+<!-- 
 CppLab3 (Circuit Buffer - STL/predicates):
 * [Circular buffer (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/circular.hpp)
 * [Predicates (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/predicates.hpp)
 * [Buffer tests (test)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/testing_circular.cpp)
 * [Predicates tests (test)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/test_predicates.cpp)
-* [STL&predicates (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/lab3_stl.pdf)
+* [STL&predicates (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/lab3_stl.pdf) -->
 
-CppLab4 (Rubik's Cube - GenAlgo/OpenCV):
+<!-- CppLab4 (Rubik's Cube - GenAlgo/OpenCV):
 * [Rubik's Cube architecture (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab4/cube)
 * [OpenCV live detection (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab4/main.cpp)
-* [Rubik's Cube (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab4/cpplab4_RubiksCube.pdf)
+* [Rubik's Cube (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab4/cpplab4_RubiksCube.pdf) -->
 
 # C Labs:
 
