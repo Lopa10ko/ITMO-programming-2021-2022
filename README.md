@@ -37,6 +37,7 @@ CppLab3 (Circuit Buffer - STL/predicates):
 |***CLab3***|[Nasa logs processing](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab3/LAB3_server_logs.pdf)|<ul><li>[Time window (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab3/clab3_time.c)</li><li>[Errors processing (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab3/clab3_codes.c)</li></ul>|
 |***CLab4***|[ID3v2 mp3 metadata redactor](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/lab4.pdf)|<ul><li>[ID3v2 (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/clab4.c)</li><li>[test mp3 (file)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab4/test.mp3)</li></ul>|
 |***CLab5***|[Conway's game of life, BMP](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.pdf)|<ul><li>[Conway's game of life (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.c)</li><li>[Conway's game of life (header)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.h)</li></ul>|
+|***CLab6***|[Archiver](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab6/Archiver.pdf)|<ul><li>[Archiver (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab6/clab6.c)</li></ul>|
 
 <!-- CLab1 (WordCount utility):
 * [Wordcount (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab1/clab1.c)
@@ -60,11 +61,12 @@ CLab3 (Nasa logs processing):
 * [Conway's game of life task (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.c)
 * [Conway's game of life task header (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.h)
 * [Conway's game of life (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab5/clab5.pdf) -->
-
+<!-- 
 CLab6 (Archiver):
 * [Archiver (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab6/clab6.c)
 * [Archiver (task)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/clab6/Archiver.pdf)
-
+ -->
+ 
 ## Facts:
 > C-based paradigm is horrible language. It's made more horrible by the fact that a lot of substandard programmers use it, to the point where it's much much easier to generate total and utter crap with it. (c) Linus Torvalds
 
