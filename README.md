@@ -6,7 +6,7 @@
 |***CppLab3***|[Circuit Buffer - STL/predicates](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/lab3_stl.pdf)|<ul><li>[Circular buffer (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/circular.hpp)</li><li>[Predicates (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/predicates.hpp)</li><li>[Circular buffer (test)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/testing_circular.cpp)</li><li>[Predicates (test)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab3/test_predicates.cpp)</li></ul>|
 |***CppLab4***|[Rubik's Cube - GenAlgo/OpenCV](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab4/cpplab4_RubiksCube.pdf)|<ul><li>[Rubik's Cube (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab4/cube)</li><li>[Cube state detection (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab4/main.cpp)</li></ul>|
 |***CppLab5***|Custom Allocator|...|
-|***CppLab6***|Compile-time (metaprogramming)|...|
+|***CppLab6***|[Compile-time (metaprogramming)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab6/cpplab6_metaprogramming.pdf)|<ul><li>[Metaprogramming (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab6/meta.hpp)</li><li>[Metaprogramming (test)]()</li></ul>|
 
 <!-- CppLab1 (OOP, Operators overload):
 * [OOP (src)](https://github.com/Lopa10ko/ITMO-programming-2021-2022/blob/main/cpplab1/cpplab1.cpp)
